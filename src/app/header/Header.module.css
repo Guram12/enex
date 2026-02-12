@@ -1,14 +1,17 @@
+@import '../colores.css';
+
 .main_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  color: rgb(255, 0, 0);
+  width: 90%;
   height: 80px;
-  background-color:  rgb(187 231 208);
+  background-color: var(--light-green);
+  color: var(--text-color);
+  z-index: 100;
 }
 
-.inside_main_cont{
+.inside_main_cont {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,19 +19,19 @@
   padding: 10px;
 }
 
-.logo_cont{
+.logo_cont {
   display: flex;
   align-items: center;
   justify-content: center;
   max-height: 40px;
 }
 
-.logo{
+.logo {
   height: 40px;
   width: auto
 }
 
-.header_buttons_cont{
+.header_buttons_cont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,29 +40,23 @@
 
 
 /* ============================ header buttons ============================ */
-.header_button{
-    color: #090909;
+.header_button {
   padding: 10px;
   font-size: 18px;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid transparent;
+  color: var(--text-color);
+  font-weight: 500 !important;
 }
 
 
 .header_button:hover {
-  border-radius: 0.5em;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  /* border: 1px solid #e8e8e8; */
 
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 
 
 /* =============================================================================== */
-
-
-
-
-

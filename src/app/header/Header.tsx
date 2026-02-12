@@ -2,7 +2,7 @@
 
 
 import styles from './Header.module.css';
-import logo from  '../../../public/logo.svg';
+import logo from '../../../public/logo.svg';
 
 
 
@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className={styles.main_container}>
       <div className={styles.inside_main_cont} >
-        <div className={styles.logo_cont}>  
+        <div className={styles.logo_cont}>
           <img src={logo.src} alt="logo" className={styles.logo} />
         </div>
 
@@ -24,9 +24,6 @@ export default function Header() {
 
 
       </div>
-      
-
-
     </header>
   );
 }
