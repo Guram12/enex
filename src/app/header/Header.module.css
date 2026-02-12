@@ -1,0 +1,65 @@
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  height: 80px;
+  background-color:  rgb(187 231 208);
+}
+
+.inside_main_cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.logo_cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 40px;
+}
+
+.logo{
+  height: 40px;
+  width: auto
+}
+
+.header_buttons_cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* ============================ header buttons ============================ */
+.header_button{
+    color: #090909;
+  padding: 10px;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+
+.header_button:hover {
+  border-radius: 0.5em;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  /* border: 1px solid #e8e8e8; */
+
+}
+
+
+
+/* =============================================================================== */
+
+
+
+
+
