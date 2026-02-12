@@ -1,11 +1,13 @@
+@import '../colores.css';
+
 .main_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  color: rgb(255, 0, 0);
+  width: 90%;
   height: 80px;
-  background-color:  rgb(187 231 208);
+  background-color: var(--light-green);
+  color: var(--text-color);
 }
 
 .inside_main_cont{
@@ -38,13 +40,13 @@
 
 /* ============================ header buttons ============================ */
 .header_button{
-    color: #090909;
   padding: 10px;
   font-size: 18px;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid transparent;
+  color: var(--text-color);
 }
 
 
