@@ -90,6 +90,16 @@ export default function MainPageClient() {
 
 
 
+          <div className={styles.experiance_header_container}>
+            <h1 className={styles.experiance_header}>WE WORK WITH ALL TYPES OF WORKPLACES</h1>
+              <button className={styles.experiance_button}>Learn More</button>
+          </div>
+
+
+
+
+
+
         </div>
       </main>
     </div>

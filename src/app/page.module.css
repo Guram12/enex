@@ -129,3 +129,27 @@
 }
 
 
+.experiance_header_container{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+}
+
+.experiance_header{
+  font-size: 50px;
+  color: var(--dark-green-color);
+  font-weight: 600 !important;
+}
+
+
+.experiance_button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--dark-green-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
