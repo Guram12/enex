@@ -33,26 +33,63 @@ export default function MainPageClient() {
         <Header />
 
         <div className={styles.background_image_container}>
-          <h1 className={styles.title}>Welcome to Enex</h1>
-          <p className={styles.description}>
-            Discover the future of work with Enex - Your ultimate coworking space
-            solution.
-          </p>
+          <div className={styles.background_content}>
+            <h1 className={styles.title}>Welcome to Enex</h1>
+            <p className={styles.description}>
+              Discover the future of work with Enex - Your ultimate coworking space
+              solution.
+            </p>
+          </div>
         </div>
 
         <div className={styles.experiance_container}>
+
           <p className={styles.experiance_title}>
             Our team brings years of experience in delivering scalable,
             high-performance technology solutions for startups and enterprise
             clients alike. From concept to deployment, we focus on building
             secure, user-centric products that solve real-world problems.
           </p>
-          <p className={styles.experiance_title}>
-            We specialize in modern web development, cloud infrastructure,
-            and system architecture design. By leveraging cutting-edge frameworks
-            and agile methodologies, we ensure fast iteration cycles, transparent
-            communication, and measurable results.
-          </p>
+
+          <div className={styles.all_experiance_cont} >
+
+            <div className={styles.experiance_item}>
+              <div className={styles.experiance_item_content} >
+                <h2 className={styles.experiance_item_title}>10 </h2>
+                <p className={styles.item_text}>Years of Experience</p>
+              </div>
+              <div className={styles.thick_line}></div>
+            </div>
+
+
+            <div className={styles.experiance_item}>
+              <div className={styles.experiance_item_content} >
+                <h2 className={styles.experiance_item_title}>400 </h2>
+                <p className={styles.item_text}>Satisfied Customers</p>
+              </div>
+              <div className={styles.thick_line}></div>
+            </div>
+
+            <div className={styles.experiance_item}>
+              <div className={styles.experiance_item_content} >
+                <h2 className={styles.experiance_item_title}>15</h2>
+                <p className={styles.item_text}>Staff Members</p>
+              </div>
+              <div className={styles.thick_line}></div>
+            </div>
+
+            <div className={styles.experiance_item}>
+              <div className={styles.experiance_item_content} >
+                <h2 className={styles.experiance_item_title}>600</h2>
+                <p className={styles.item_text}>Clean Spaces</p>
+              </div>
+              <div className={styles.thick_line}></div>
+            </div>
+
+          </div>
+
+
+
         </div>
       </main>
     </div>
