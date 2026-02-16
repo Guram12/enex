@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "./header/Header";
 import styles from "./page.module.css";
 import { useEffect } from "react";
+import it_image from "./assets/it.png";
+import desk_image from "./assets/desk_services.jpg";
+import backup_image from "./assets/backup.jpg";
 
 export default function MainPageClient() {
 
@@ -92,10 +95,51 @@ export default function MainPageClient() {
 
           <div className={styles.experiance_header_container}>
             <h1 className={styles.experiance_header}>WE WORK WITH ALL TYPES OF WORKPLACES</h1>
-              <button className={styles.experiance_button}>Learn More</button>
+            <button className={styles.experiance_button}>Learn More</button>
           </div>
 
 
+          <div className={styles.experiance_image_container}>
+            {/* 1 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={it_image.src}
+                  alt="IT service image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>IT Infrastructure Support</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
+
+            {/* 2 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={desk_image.src}
+                  alt="IT service image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>Help Desk Services</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
+
+            {/* 3 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={backup_image.src}
+                  alt="IT service image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>Managed Backup Services</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
+
+          </div>
 
 
 
