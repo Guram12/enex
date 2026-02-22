@@ -12,6 +12,7 @@ export default function I18nProvider({ children }: { children: React.ReactNode }
         i18n.changeLanguage(savedLang);
       }
     } catch {
+      
       // localStorage unavailable (e.g. private browsing)
     }
   }, []);
