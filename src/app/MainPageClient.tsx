@@ -24,11 +24,14 @@ export default function MainPageClient() {
       const scrollPosition = window.scrollY;
       const backgroundContainer = document.querySelector(
         `.${styles.background_image_container}`
-      ) as HTMLElement; // Cast to HTMLElement
+      ) as HTMLElement;
       if (backgroundContainer) {
-        backgroundContainer.style.backgroundPositionY = `${scrollPosition * 0.5}px`; // Adjust the multiplier for speed
+        backgroundContainer.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
       }
     };
+
+    // Initialize the background position on mount
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -57,6 +60,8 @@ export default function MainPageClient() {
             Discover the future of work with Enex - Your ultimate coworking space
             solution.
           </p>
+
+          <button className={styles.contact_button} >Start Your Project With Us</button>
         </div>
         {/* </div> */}
 

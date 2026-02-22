@@ -69,6 +69,16 @@
   margin-top: 40px;
 }
 
+.contact_button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--white-text-color);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600 !important;
+}
+
 
 /* experiance cont   styles  */
 .experiance_container {

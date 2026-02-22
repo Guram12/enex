@@ -8,7 +8,12 @@
   height: 80px;
   background-color:white;
   color: var(--text-color);
-  z-index: 100;
+  z-index: 150;
+  position: fixed !important;
+}
+
+.main_container.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .inside_main_cont {
