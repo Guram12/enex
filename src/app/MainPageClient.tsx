@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.css";
-import Header from "./header/Header";
+import Header from "./header_footer/Header";
 import styles from './MainPage.module.css';
 import { useEffect } from "react";
 import audit_image from "../app/assets/audit.jpg";
@@ -13,7 +13,7 @@ import supervision_image from "../app/assets/supervision.jpg";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrLinkedin } from "react-icons/gr";
-
+import Footer from "./header_footer/Footer";
 
 
 
@@ -214,6 +214,9 @@ export default function MainPageClient() {
 
 
         </div>
+
+        <Footer />
+
       </main>
     </div>
   );
