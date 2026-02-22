@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react';
 
 import styles from './Header.module.css';
 import logo from '../../../public/logo.svg';
@@ -8,8 +9,26 @@ import logo from '../../../public/logo.svg';
 
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.main_container}>
+    <header className={`${styles.main_container} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inside_main_cont} >
         <div className={styles.logo_cont}>
           <img src={logo.src} alt="logo" className={styles.logo} />
