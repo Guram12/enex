@@ -49,8 +49,6 @@ export default function Header() {
     }
   };
 
-
-
   return (
     <header className={`${styles.main_container} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inside_main_cont} >
