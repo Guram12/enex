@@ -18,10 +18,18 @@ export default function ContactClient() {
         <div className={styles.contact_form} >
           <h2 className={styles.contact_title}>Contact Us</h2>
           <form className={styles.form} >
-            <input type="text" placeholder="Your Name" className={styles.input} />
-            <input type="email" placeholder="Your Email" className={styles.input} />
-            <textarea placeholder="Your Message" className={styles.textarea} />
-            <button type="submit" className={styles.submit_button}>Send Message</button>
+            <div className={styles.name_fields} >
+              <input type="text" placeholder="Your Name" className={styles.input} />
+              <input type="text" placeholder="Your Second Name" className={styles.input} />
+            </div>
+            <div className={styles.email_fields}>
+
+              <input type="email" placeholder="Your Email" className={styles.input} />
+              <input type="text" placeholder="Subject" className={styles.input} />
+
+            </div>
+            <textarea placeholder="Leave us a message..." className={styles.textarea} />
+            <button type="submit" className={styles.submit_button}>Submit</button>
           </form>
         </div>
 
