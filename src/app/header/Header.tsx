@@ -8,8 +8,6 @@ import styles from './Header.module.css';
 import logo from '../../../public/logo.svg';
 
 
-
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lang, setLang] = useState<string>('en');

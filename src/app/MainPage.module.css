@@ -87,7 +87,7 @@
   font-weight: 600 !important;
 }
 
-.social_icons_container{
+.social_icons_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +96,7 @@
   margin-top: 20px;
 }
 
-.social_icon{
+.social_icon {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -114,7 +114,6 @@
   justify-content: flex-start;
   width: 100%;
   min-height: 400px;
-  padding: 20px;
   margin-top: 700px;
 }
 
@@ -172,6 +171,7 @@
   align-items: center;
   align-items: flex-start;
   margin-bottom: 70px;
+  padding: 20px;
 }
 
 .experiance_header {
@@ -201,7 +201,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 100%;
   min-height: 400px;
   padding: 20px;
@@ -247,4 +247,86 @@
   height: 3px;
   background-color: var(--dark-green-color);
   margin-top: 20px;
+}
+
+
+
+.work_steps_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 100px;
+  min-height: 400px;
+  padding: 20px;
+  background: var(--light-green);
+
+}
+
+
+.work_steps_header {
+  font-size: 44px;
+  color: var(--dark-green-color);
+  font-weight: 700 !important;
+  max-width: 980px;
+  line-height: 1.2;
+}
+
+
+.work_steps_child_cont {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 280px;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.work_steps{
+  background-color: var(--white-text-color);
+  width: 400px;
+  min-height: 320px;
+  border: 2px solid var(--dark-green-color);
+  border-radius: 14px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0 8px 26px rgba(11, 63, 59, 0.14);
+}
+
+.work_steps_title {
+  font-size: 26px;
+  color: var(--dark-green-color);
+  font-weight: 700 !important;
+}
+
+.work_steps_subtitle {
+  font-size: 21px;
+  color: var(--dark-green-color);
+  font-weight: 600 !important;
+  margin-top: 12px;
+  line-height: 1.35;
+}
+
+.work_steps_list {
+  margin-top: 20px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work_steps_list_item {
+  font-size: 15px;
+  color: var(--dark-green-color);
+  line-height: 1.55;
+  font-weight: 500 !important;
 }
