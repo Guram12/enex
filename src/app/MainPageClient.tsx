@@ -13,14 +13,14 @@ import supervision_image from "../app/assets/supervision.jpg";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrLinkedin } from "react-icons/gr";
-
+import { useTranslation } from "react-i18next";
 
 
 
 
 
 export default function MainPageClient() {
-
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -213,76 +213,68 @@ export default function MainPageClient() {
 
 
 
-          <div className={styles.work_steps_container} >
-            <h1 className={styles.work_steps_header} >როგორ ვმუშაობთ- სერვისის ეტაპები</h1>
+          <div className={styles.work_steps_container}>
+          <h1 className={styles.work_steps_header}>{t("work_steps.header")}</h1>
 
-            <div className={styles.work_steps_child_cont} >
-
-              {/* step 1 */}
-              <div className={styles.work_steps} >
-                <h2 className={styles.work_steps_title}>ეტაპი I</h2>
-                <h3 className={styles.work_steps_subtitle}>ადგილზე ვიზიტი და პირველადი შეფასება</h3>
-                <ul className={styles.work_steps_list} >
-                  <li className={styles.work_steps_list_item} >ვიზუალური დათვალიერება</li>
-                  <li className={styles.work_steps_list_item} >სისტემების ტიპების და რაოდენობების განსაზღვრა</li>
-                  <li className={styles.work_steps_list_item} >პირველადი აქტის შედგენა
-                    <br /> – არსებული მდგომარეობა
-                    <br /> – ხარვეზები და დეფექტები
-                    <br /> – სამუშაოების მოცულობა
-                  </li>
-                </ul>
-              </div>
-
-              {/* step 2 */}
-              <div className={styles.work_steps} >
-                <h2 className={styles.work_steps_title}>ეტაპი II</h2>
-                <h3 className={styles.work_steps_subtitle}>შემოწმება და ტესტირება</h3>
-                <ul className={styles.work_steps_list} >
-                  <li className={styles.work_steps_list_item} >სისტემების დეტალური ტესტირება</li>
-                  <li className={styles.work_steps_list_item} >პროექტებთან და სტანდარტებთან შედარება</li>
-                  <li className={styles.work_steps_list_item} >ტესტირების აქტის შედგენა
-                    <br /> – კონკრეტული ტესტების შედეგები
-                    <br /> – ანალიზი
-                    <br /> – გამოვლენილი გაუმართავობების ჩამონათვალი
-                    <br /> – გამოსწორების ღირებულებითი შეფასება
-                  </li>
-                </ul>
-              </div>
-
-              {/* step 3 */}
-              <div className={styles.work_steps} >
-                <h2 className={styles.work_steps_title}>ეტაპი III</h2>
-                <h3 className={styles.work_steps_subtitle}>პრობლემების აღმოფხვრა</h3>
-                <ul className={styles.work_steps_list} >
-                  <li className={styles.work_steps_list_item} >გამოვლენილი ხარვეზების გამოსწორება</li>
-                  <li className={styles.work_steps_list_item} >მონტაჟი / ჩანაცვლება /კორექცია</li>
-                  <li className={styles.work_steps_list_item} >ხელახალი ტესტირება</li>
-                  <li className={styles.work_steps_list_item} >სისტემის გამართულ მუშაობაზე დადასტურება</li>
-                </ul>
-              </div>
-
-              {/* step 4 */}
-              <div className={styles.work_steps} >
-                <h2 className={styles.work_steps_title}>ეტაპი IV</h2>
-                <h3 className={styles.work_steps_subtitle}>წლიური გეგმიური სერვისი</h3>
-                <ul className={styles.work_steps_list} >
-                  <li className={styles.work_steps_list_item} >სისტემების რეგულარულ და გეგმიურ შემოწმებას</li>
-                  <li className={styles.work_steps_list_item} >ფუნქციონალურ და ტექნიკურ ტესტირებებს</li>
-                  <li className={styles.work_steps_list_item} >გეგმიური ტექნიკური სამუშაოების შესრულებას
-                    <br /> – მაკომპლექტებელი და სახარჯი
-                    მასალების შეცვლას
-                    <br /> – მწარმოებლის რეკომენდაციებისა და ტექნიკური რეგლამენტის შესაბამისად
-                  </li>
-                  <li className={styles.work_steps_list_item} >შემოწმებისა და ტესტირების შედეგების დოკუმენტირებას</li>
-                  <li className={styles.work_steps_list_item} >ტექნიკური აქტებისა და ანგარიშების შედგენას</li>
-
-
-                </ul>
-              </div>
-
-
+          <div className={styles.work_steps_child_cont}>
+            <div className={styles.work_steps}>
+              <h2 className={styles.work_steps_title}>{t("work_steps.step1.title")}</h2>
+              <h3 className={styles.work_steps_subtitle}>{t("work_steps.step1.subtitle")}</h3>
+              <ul className={styles.work_steps_list}>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step1.item1")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step1.item2")}</li>
+                <li className={styles.work_steps_list_item}>
+                  {t("work_steps.step1.item3")}
+                  <br /> {t("work_steps.step1.item3_line1")}
+                  <br /> {t("work_steps.step1.item3_line2")}
+                  <br /> {t("work_steps.step1.item3_line3")}
+                </li>
+              </ul>
             </div>
 
+            <div className={styles.work_steps}>
+              <h2 className={styles.work_steps_title}>{t("work_steps.step2.title")}</h2>
+              <h3 className={styles.work_steps_subtitle}>{t("work_steps.step2.subtitle")}</h3>
+              <ul className={styles.work_steps_list}>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step2.item1")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step2.item2")}</li>
+                <li className={styles.work_steps_list_item}>
+                  {t("work_steps.step2.item3")}
+                  <br /> {t("work_steps.step2.item3_line1")}
+                  <br /> {t("work_steps.step2.item3_line2")}
+                  <br /> {t("work_steps.step2.item3_line3")}
+                  <br /> {t("work_steps.step2.item3_line4")}
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.work_steps}>
+              <h2 className={styles.work_steps_title}>{t("work_steps.step3.title")}</h2>
+              <h3 className={styles.work_steps_subtitle}>{t("work_steps.step3.subtitle")}</h3>
+              <ul className={styles.work_steps_list}>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step3.item1")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step3.item2")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step3.item3")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step3.item4")}</li>
+              </ul>
+            </div>
+
+            <div className={styles.work_steps}>
+              <h2 className={styles.work_steps_title}>{t("work_steps.step4.title")}</h2>
+              <h3 className={styles.work_steps_subtitle}>{t("work_steps.step4.subtitle")}</h3>
+              <ul className={styles.work_steps_list}>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step4.item1")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step4.item2")}</li>
+                <li className={styles.work_steps_list_item}>
+                  {t("work_steps.step4.item3")}
+                  <br /> {t("work_steps.step4.item3_line1")}
+                  <br /> {t("work_steps.step4.item3_line2")}
+                </li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step4.item4")}</li>
+                <li className={styles.work_steps_list_item}>{t("work_steps.step4.item5")}</li>
+              </ul>
+            </div>
+          </div>
 
           </div>
         </div>
