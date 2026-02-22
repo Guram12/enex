@@ -20,7 +20,7 @@ const resources = {
           title: "Stage I",
           subtitle: "On-site visit and initial assessment",
           item1: "Visual inspection",
-          item2: "Definition of system types and quantities",
+          item2: "Defining system types and quantities",
           item3: "Preparation of initial report",
           item3_line1: "– current condition",
           item3_line2: "– faults and defects",
@@ -36,7 +36,7 @@ const resources = {
           item3_line1: "– specific test results",
           item3_line2: "– analysis",
           item3_line3: "– list of identified malfunctions",
-          item3_line4: "– cost estimation for corrections",
+          item3_line4: "– cost estimate for corrections",
         },
 
         step3: {
@@ -44,7 +44,7 @@ const resources = {
           subtitle: "Problem elimination",
           item1: "Fixing identified defects",
           item2: "Installation / replacement / correction",
-          item3: "Retesting",
+          item3: "Re-testing",
           item4: "Confirmation of proper system operation",
         },
 
@@ -54,8 +54,8 @@ const resources = {
           item1: "Regular and scheduled system inspections",
           item2: "Functional and technical testing",
           item3: "Execution of planned technical works",
-          item3_line1: "– replacement of components and consumable materials",
-          item3_line2: "– in accordance with manufacturer recommendations and technical regulations",
+          item3_line1: "– replacement of components and consumables",
+          item3_line2: "– according to manufacturer recommendations and technical regulations",
           item4: "Documentation of inspection and testing results",
           item5: "Preparation of technical acts and reports",
         },
@@ -76,7 +76,7 @@ const resources = {
       language_en: "English",
       language_ka: "ქართული",
 
-            work_steps: {
+      work_steps: {
         header: "როგორ ვმუშაობთ — სერვისის ეტაპები",
 
         step1: {
@@ -114,13 +114,13 @@ const resources = {
         step4: {
           title: "ეტაპი IV",
           subtitle: "წლიური გეგმიური სერვისი",
-          item1: "სისტემების რეგულარული და გეგმიური შემოწმება",
-          item2: "ფუნქციონალური და ტექნიკური ტესტირება",
-          item3: "გეგმიური ტექნიკური სამუშაოების შესრულება",
-          item3_line1: "– მაკომპლექტებელი და სახარჯი მასალების შეცვლა",
+          item1: "სისტემების რეგულარულ და გეგმიურ შემოწმებას",
+          item2: "ფუნქციონალურ და ტექნიკურ ტესტირებებს",
+          item3: "გეგმიური ტექნიკური სამუშაოების შესრულებას",
+          item3_line1: "– მაკომპლექტებელი და სახარჯი მასალების შეცვლას",
           item3_line2: "– მწარმოებლის რეკომენდაციებისა და ტექნიკური რეგლამენტის შესაბამისად",
-          item4: "შემოწმებისა და ტესტირების შედეგების დოკუმენტირება",
-          item5: "ტექნიკური აქტებისა და ანგარიშების შედგენა",
+          item4: "შემოწმებისა და ტესტირების შედეგების დოკუმენტირებას",
+          item5: "ტექნიკური აქტებისა და ანგარიშების შედგენას",
         },
       },
 
