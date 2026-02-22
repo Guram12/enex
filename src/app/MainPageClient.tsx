@@ -4,9 +4,17 @@ import "./globals.css";
 import Header from "./header/Header";
 import styles from "./page.module.css";
 import { useEffect } from "react";
-import it_image from "./assets/it.png";
-import desk_image from "./assets/desk_services.jpg";
-import backup_image from "./assets/backup.jpg";
+import audit_image from "../app/assets/audit.jpg";
+import designe_image from "../app/assets/designe.jpg";
+import electrical_image from "../app/assets/electrical.png";
+import fire_alarm_image from "../app/assets/fire-alarm.jpg";
+import hvac_image from "../app/assets/hvac.jpeg";
+import supervision_image from "../app/assets/supervision.jpg";
+
+
+
+
+
 
 export default function MainPageClient() {
 
@@ -33,28 +41,36 @@ export default function MainPageClient() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+
         <Header />
 
+        {/*=========== background image container ========= */}
         <div className={styles.background_image_container}>
-          <div className={styles.background_content}>
-            <h1 className={styles.title}>Welcome to Enex</h1>
-            <p className={styles.description}>
-              Discover the future of work with Enex - Your ultimate coworking space
-              solution.
-            </p>
-          </div>
         </div>
+        {/* ===================================================== */}
+
+        {/* <div className={styles.background_content_wrapper} > */}
+
+        <div className={styles.background_content}>
+          <h1 className={styles.title}>Welcome to Enex</h1>
+          <p className={styles.description}>
+            Discover the future of work with Enex - Your ultimate coworking space
+            solution.
+          </p>
+        </div>
+        {/* </div> */}
 
         <div className={styles.experiance_container}>
 
-          <p className={styles.experiance_title}>
+          <>
+            {/* <p className={styles.experiance_title}>
             Our team brings years of experience in delivering scalable,
             high-performance technology solutions for startups and enterprise
             clients alike. From concept to deployment, we focus on building
             secure, user-centric products that solve real-world problems.
-          </p>
+          </p> */}
 
-          <div className={styles.all_experiance_cont} >
+            {/* <div className={styles.all_experiance_cont} >
 
             <div className={styles.experiance_item}>
               <div className={styles.experiance_item_content} >
@@ -89,13 +105,13 @@ export default function MainPageClient() {
               <div className={styles.thick_line}></div>
             </div>
 
-          </div>
+          </div> */}
 
+          </>
 
 
           <div className={styles.experiance_header_container}>
             <h1 className={styles.experiance_header}>WE WORK WITH ALL TYPES OF WORKPLACES</h1>
-            <button className={styles.experiance_button}>Learn More</button>
           </div>
 
 
@@ -104,12 +120,12 @@ export default function MainPageClient() {
             <div className={styles.each_image_cont} >
               <div className={styles.image_wrapper} >
                 <img
-                  src={it_image.src}
-                  alt="IT service image"
+                  src={fire_alarm_image.src}
+                  alt="Fire alarm image"
                   className={styles.experiance_image}
                 />
               </div>
-              <p className={styles.image_text}>IT Infrastructure Support</p>
+              <p className={styles.image_text}>Fire alarm</p>
               <div className={styles.image_thick_line}></div>
             </div>
 
@@ -117,12 +133,12 @@ export default function MainPageClient() {
             <div className={styles.each_image_cont} >
               <div className={styles.image_wrapper} >
                 <img
-                  src={desk_image.src}
-                  alt="IT service image"
+                  src={electrical_image.src}
+                  alt="Electrical image"
                   className={styles.experiance_image}
                 />
               </div>
-              <p className={styles.image_text}>Help Desk Services</p>
+              <p className={styles.image_text}>Electrical</p>
               <div className={styles.image_thick_line}></div>
             </div>
 
@@ -130,15 +146,53 @@ export default function MainPageClient() {
             <div className={styles.each_image_cont} >
               <div className={styles.image_wrapper} >
                 <img
-                  src={backup_image.src}
-                  alt="IT service image"
+                  src={hvac_image.src}
+                  alt="Hvac image"
                   className={styles.experiance_image}
                 />
               </div>
-              <p className={styles.image_text}>Managed Backup Services</p>
+              <p className={styles.image_text}>Hvac</p>
               <div className={styles.image_thick_line}></div>
             </div>
 
+            {/* 4 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={designe_image.src}
+                  alt="Design image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>Design</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
+
+            {/* 5 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={supervision_image.src}
+                  alt="Supervision image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>Supervision</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
+
+            {/* 6 image */}
+            <div className={styles.each_image_cont} >
+              <div className={styles.image_wrapper} >
+                <img
+                  src={audit_image.src}
+                  alt="Audit image"
+                  className={styles.experiance_image}
+                />
+              </div>
+              <p className={styles.image_text}>Audit</p>
+              <div className={styles.image_thick_line}></div>
+            </div>
           </div>
 
 
