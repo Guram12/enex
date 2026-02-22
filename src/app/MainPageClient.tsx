@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import Header from "./header/Header";
-import styles from "./page.module.css";
+import styles from './MainPage.module.css';
 import { useEffect } from "react";
 import audit_image from "../app/assets/audit.jpg";
 import designe_image from "../app/assets/designe.jpg";
@@ -10,6 +10,9 @@ import electrical_image from "../app/assets/electrical.png";
 import fire_alarm_image from "../app/assets/fire-alarm.jpg";
 import hvac_image from "../app/assets/hvac.jpeg";
 import supervision_image from "../app/assets/supervision.jpg";
+import { FaFacebookF } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { GrLinkedin } from "react-icons/gr";
 
 
 
@@ -52,21 +55,29 @@ export default function MainPageClient() {
         </div>
         {/* ===================================================== */}
 
-        {/* <div className={styles.background_content_wrapper} > */}
 
         <div className={styles.background_content}>
-          <h1 className={styles.title}>Welcome to Enex</h1>
-          <p className={styles.description}>
-            Discover the future of work with Enex - Your ultimate coworking space
-            solution.
-          </p>
+          <div>
+            <h1 className={styles.title}>Welcome to Enex</h1>
+            <p className={styles.description}>
+              Discover the future of work with Enex - Your ultimate coworking space
+              solution.
+            </p>
+            <button className={styles.contact_button} >Start Your Project With Us</button>
+          </div>
 
-          <button className={styles.contact_button} >Start Your Project With Us</button>
+          <div className={styles.social_icons_container}>
+            <FaFacebookF color="white" size={24} className={styles.social_icon} />
+            <AiFillInstagram color="white" size={24} className={styles.social_icon} />
+            <GrLinkedin color="white" size={22} className={styles.social_icon} />
+          </div>
+
         </div>
-        {/* </div> */}
+
+
+
 
         <div className={styles.experiance_container}>
-
           <>
             {/* <p className={styles.experiance_title}>
             Our team brings years of experience in delivering scalable,
@@ -113,7 +124,6 @@ export default function MainPageClient() {
           </div> */}
 
           </>
-
 
           <div className={styles.experiance_header_container}>
             <h1 className={styles.experiance_header}>WE WORK WITH ALL TYPES OF WORKPLACES</h1>

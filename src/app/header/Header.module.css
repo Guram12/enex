@@ -10,6 +10,7 @@
   color: var(--text-color);
   z-index: 150;
   position: fixed !important;
+  max-width: 2200px;
 }
 
 .main_container.scrolled {
