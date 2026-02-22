@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import logo from '../../../public/logo.svg';
 import { useTranslation } from "react-i18next";
-
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import Link from 'next/link';
 
 
 
@@ -50,14 +50,18 @@ export default function Header() {
     <header className={`${styles.main_container} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inside_main_cont}>
         <div className={styles.logo_cont}>
+          <Link href="/">
           <img src={logo.src} alt="logo" className={styles.logo} />
+          </Link>
         </div>
 
         <div className={styles.header_buttons_cont}>
           <button className={styles.header_button}>{t('about_us')}</button>
           <button className={styles.header_button}>{t('workplaces')}</button>
           <button className={styles.header_button}>{t('facilities')}</button>
-          <button className={styles.header_button}>{t('contact_us')}</button>
+          <Link href="/contact">
+            <button className={styles.header_button}>{t('contact_us')}</button>
+          </Link>
 
           <FormControl variant="standard" size="small" sx={{ minWidth: 56 }}>
             <Select
