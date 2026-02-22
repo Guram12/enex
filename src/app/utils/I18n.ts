@@ -128,12 +128,10 @@ const resources = {
   },
 };
 
-const savedLng =
-  typeof window !== "undefined" ? localStorage.getItem("lng") : null;
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: savedLng || "ka",
+  lng: "ka", 
   fallbackLng: "en",
   interpolation: { escapeValue: false },
 });

@@ -14,7 +14,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrLinkedin } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
-
+import Footer from "./header&footer/Footer";
 
 
 
@@ -278,7 +278,9 @@ export default function MainPageClient() {
 
 
 
+          <Footer />
         </div>
+
       </main>
     </div>
   );
