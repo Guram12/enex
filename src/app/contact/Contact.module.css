@@ -116,24 +116,65 @@
 }
 
 /* ===================== MOBILE RESPONSIVE STYLES ===================== */
-
 /* Tablet - 1024px */
 @media (max-width: 1024px) {
+  .contact_container {
+    margin-top: 80px;
+    padding: 30px 20px;
+  }
+
   .contact_inside_cont {
-    gap: 60px;
-    padding: 0 30px;
+    gap: 40px;
+    padding: 0 20px;
   }
 
   .image_cont {
-    width: 420px;
+    width: 45%;
+    min-width: 280px;
+  }
+
+  .contact_form {
+    width: 50%;
+    max-width: 100%;
   }
 
   .form {
-    width: 420px;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .name_fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .email_fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    min-height: 130px;
   }
 
   .contact_title {
     font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .submit_button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
   }
 }
 
@@ -146,6 +187,7 @@
 
   .contact_inside_cont {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     padding: 0 16px;
   }
