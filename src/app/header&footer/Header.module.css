@@ -5,12 +5,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 80px;
+  height: 70px;
   background-color: white;
   color: var(--text-color);
   z-index: 150;
   position: fixed !important;
-  max-width: 2200px;
+  max-width: 2600px;
   left: 50%;
   transform: translateX(-50%);
 }

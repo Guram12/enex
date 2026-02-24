@@ -6,8 +6,8 @@ const resources = {
   en: {
     translation: {
       about_us: "About Us",
-      workplaces: "Workplaces",
-      facilities: "Facilities",
+      services: "Services",
+      stages: "Stages",
       contact_us: "Contact Us",
       lang_en: "English",
       lang_ka: "ქართული",
@@ -68,8 +68,8 @@ const resources = {
   ka: {
     translation: {
       about_us: "ჩვენ შესახებ",
-      workplaces: "სამუშაო ადგილები",
-      facilities: "სერვისები",
+      services: "სერვისები",
+      stages: "ეტაპები",
       contact_us: "კონტაქტი",
       lang_en: "English",
       lang_ka: "ქართული",

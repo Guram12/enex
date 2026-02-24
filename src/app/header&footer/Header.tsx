@@ -9,14 +9,21 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 
 export default function Header() {
   const { t, i18n } = useTranslation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [lang, setLang] = useState<'en' | 'ka'>((i18n.language as 'en' | 'ka') || 'ka');
+
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,19 +53,56 @@ export default function Header() {
 
   const getFlag = (lng: 'en' | 'ka') => (lng === 'en' ? '🇺🇸' : '🇬🇪');
 
+
+// ======================== scrol up when logo click  ============================
+  const handleLogoScroll = () => {
+    if (pathname !== "/") {
+      // Set flag and redirect to main page
+      localStorage.setItem("scrollUp", "true");
+      router.push("/");
+    } else {
+      // Already on main page, just scroll
+      window.dispatchEvent(new Event("scrollUp"));
+    }
+  };
+// ===============================================================================
+
+
+  // ============================= auto scroll =============================
+  const handleWorkplacesClick = () => {
+    if (pathname !== "/") {
+      // Set flag and redirect to main page
+      localStorage.setItem("scrollToWorkplaces", "true");
+      router.push("/");
+    } else {
+      // Already on main page, just scroll
+      window.dispatchEvent(new Event("scrollToWorkplaces"));
+    }
+  };
+
+  const handleStagesClick = () => {
+    if (pathname !== "/") {
+      localStorage.setItem("scrollToStages", "true");
+      router.push("/");
+    } else {
+      window.dispatchEvent(new Event("scrollToStages"));
+    }
+  };
+
+  // =======================================================================
   return (
     <header className={`${styles.main_container} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inside_main_cont}>
-        <div className={styles.logo_cont}>
+        <div className={styles.logo_cont} onClick={handleLogoScroll} >
           <Link href="/">
-          <img src={logo.src} alt="logo" className={styles.logo} />
+            <img src={logo.src} alt="logo" className={styles.logo} />
           </Link>
         </div>
 
         <div className={styles.header_buttons_cont}>
-          <button className={styles.header_button}>{t('about_us')}</button>
-          <button className={styles.header_button}>{t('workplaces')}</button>
-          <button className={styles.header_button}>{t('facilities')}</button>
+          <button className={styles.header_button}  >{t('about_us')}</button>
+          <button className={styles.header_button} onClick={handleWorkplacesClick} >{t('services')}</button>
+          <button className={styles.header_button} onClick={handleStagesClick}>{t('stages')}</button>
           <Link href="/contact">
             <button className={styles.header_button}>{t('contact_us')}</button>
           </Link>
