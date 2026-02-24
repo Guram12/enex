@@ -1,0 +1,244 @@
+"use client";
+
+import "./globals.css";
+import styles from './MainPage.module.css';
+import { useEffect, useRef } from "react";
+import audit_image from "../app/assets/audit.jpg";
+import designe_image from "../app/assets/designe.jpg";
+import electrical_image from "../app/assets/electrical.png";
+import fire_alarm_image from "../app/assets/fire-alarm.jpg";
+import hvac_image from "../app/assets/hvac.jpeg";
+import supervision_image from "../app/assets/supervision.jpg";
+import { FaFacebookF } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { GrLinkedin } from "react-icons/gr";
+import { useTranslation } from "react-i18next";
+import { motion, useInView } from "framer-motion";
+
+// Reusable animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+// Wrapper that triggers animation when element enters viewport
+function AnimateOnView({ children, variants = fadeInUp, className }: {
+  children: React.ReactNode;
+  variants?: typeof fadeInUp;
+  className?: string;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      variants={variants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export default function MainPageClient() {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    // Enable smooth scrolling
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const backgroundContainer = document.querySelector(
+        `.${styles.background_image_container}`
+      ) as HTMLElement;
+      if (backgroundContainer) {
+        backgroundContainer.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.documentElement.style.scrollBehavior = "";
+    };
+  }, []);
+
+  const imagesData = [
+    { src: fire_alarm_image.src, alt: "Fire alarm image", label: "Fire alarm" },
+    { src: electrical_image.src, alt: "Electrical image", label: "Electrical" },
+    { src: hvac_image.src, alt: "Hvac image", label: "Hvac" },
+    { src: designe_image.src, alt: "Design image", label: "Design" },
+    { src: supervision_image.src, alt: "Supervision image", label: "Supervision" },
+    { src: audit_image.src, alt: "Audit image", label: "Audit" },
+  ];
+
+  const workSteps = [
+    { stepKey: "step1", extraLines: ["item3_line1", "item3_line2", "item3_line3"] },
+    { stepKey: "step2", extraLines: ["item3_line1", "item3_line2", "item3_line3", "item3_line4"] },
+    { stepKey: "step3", extraLines: [] },
+    { stepKey: "step4", extraLines: ["item3_line1", "item3_line2"] },
+  ];
+
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+
+        {/* =========== background image container ========= */}
+        <div className={styles.background_image_container} />
+
+        {/* Hero content with entrance animation */}
+        <motion.div
+          className={styles.background_content}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+        >
+          <div>
+            <motion.h1
+              className={styles.title}
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            >
+              Welcome to Enex
+            </motion.h1>
+            <motion.p
+              className={styles.description}
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+            >
+              Discover the future of work with Enex - Your ultimate coworking space solution.
+            </motion.p>
+            <motion.button
+              className={styles.contact_button}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Start Your Project With Us
+            </motion.button>
+          </div>
+
+          <motion.div
+            className={styles.social_icons_container}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          >
+            <motion.div whileHover={{ scale: 1.2 }} className={styles.social_icon}>
+              <FaFacebookF color="white" size={24} />
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.2 }} className={styles.social_icon}>
+              <AiFillInstagram color="white" size={24} />
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.2 }} className={styles.social_icon}>
+              <GrLinkedin color="white" size={22} />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+
+        {/* ===== Experience section ===== */}
+        <div className={styles.experiance_container}>
+
+          <AnimateOnView variants={fadeInLeft}>
+            <div className={styles.experiance_header_container}>
+              <h1 className={styles.experiance_header}>WE WORK WITH ALL TYPES OF WORKPLACES</h1>
+            </div>
+          </AnimateOnView>
+
+          {/* Images grid with stagger */}
+          <motion.div
+            className={styles.experiance_image_container}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            {imagesData.map(({ src, alt, label }) => (
+              <motion.div
+                key={label}
+                className={styles.each_image_cont}
+                variants={fadeInUp}
+              >
+                <div className={styles.image_wrapper}>
+                  <img src={src} alt={alt} className={styles.experiance_image} />
+                </div>
+                <p className={styles.image_text}>{label}</p>
+                <div className={styles.image_thick_line} />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Work steps section */}
+          <div className={styles.work_steps_container}>
+            <AnimateOnView variants={fadeInLeft}>
+              <h1 className={styles.work_steps_header}>{t("work_steps.header")}</h1>
+            </AnimateOnView>
+
+            <motion.div
+              className={styles.work_steps_child_cont}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
+              {workSteps.map(({ stepKey }, index) => (
+                <motion.div
+                  key={stepKey}
+                  className={styles.work_steps}
+                  variants={fadeInUp}
+                  whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(11,63,59,0.2)" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <h2 className={styles.work_steps_title}>
+                    {t(`work_steps.${stepKey}.title`)}
+                  </h2>
+                  <h3 className={styles.work_steps_subtitle}>
+                    {t(`work_steps.${stepKey}.subtitle`)}
+                  </h3>
+                  <ul className={styles.work_steps_list}>
+                    <li className={styles.work_steps_list_item}>
+                      {t(`work_steps.${stepKey}.item1`)}
+                    </li>
+                    <li className={styles.work_steps_list_item}>
+                      {t(`work_steps.${stepKey}.item2`)}
+                    </li>
+                    <li className={styles.work_steps_list_item}>
+                      {t(`work_steps.${stepKey}.item3`)}
+                    </li>
+                    <li className={styles.work_steps_list_item}>
+                      {t(`work_steps.${stepKey}.item4`)}
+                    </li>
+                  </ul>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  );
+}

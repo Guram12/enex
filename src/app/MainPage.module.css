@@ -20,7 +20,7 @@
   justify-content: flex-start;
   background-color: var(--foreground);
   position: relative;
-  max-width: 2200px;
+  overflow-x: hidden;
 }
 
 
@@ -29,18 +29,18 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-top: -80px;
-  width: 100vw;
+  margin-top: -70px;
   left: 50%;
   transform: translateX(-50%);
-  min-height: 800px;
+  height: calc(100vh + 70px);
   padding: 20px;
   background-image: url('../../public/background_photo.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
-  position: absolute;
+  position: relative;
   z-index: 99;
+  width: 101% !important;
 }
 
 
@@ -114,7 +114,6 @@
   justify-content: flex-start;
   width: 100%;
   min-height: 400px;
-  margin-top: 700px;
 }
 
 .experiance_title {
@@ -286,7 +285,7 @@
 }
 
 
-.work_steps{
+.work_steps {
   background-color: var(--white-text-color);
   width: 400px;
   min-height: 320px;
