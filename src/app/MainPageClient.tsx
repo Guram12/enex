@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import styles from './MainPage.module.css';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import audit_image from "../app/assets/audit.jpg";
 import designe_image from "../app/assets/designe.jpg";
 import electrical_image from "../app/assets/electrical.png";
@@ -15,7 +15,7 @@ import { GrLinkedin } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
-
+import Modal from "./utils/Modal";
 
 
 export default function MainPageClient() {
@@ -73,7 +73,7 @@ export default function MainPageClient() {
     }),
   };
 
-// =================================== scroll to stages when logo click  ============================
+  // =================================== scroll to stages when logo click  ============================
   const logoScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -151,6 +151,32 @@ export default function MainPageClient() {
 
 
   // ==================================================================================
+
+  // ===============================  modal operations  ================================1
+
+
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalContent, setModalContent] = useState<{ image: string; header: string; text: string }>({ image: "", header: "", text: "" });
+
+
+
+
+  const handleImageClick = (image: string, header: string, text: string) => {
+    setModalContent({ image, header, text });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
+
+
+
+
+  // ==================================================================================
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -284,7 +310,16 @@ export default function MainPageClient() {
             {/* 1 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={0}>
               <div className={styles.image_wrapper}>
-                <img src={fire_alarm_image.src} alt="Fire alarm image" className={styles.experiance_image} />
+                <img
+                  src={fire_alarm_image.src}
+                  alt="Fire alarm image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(fire_alarm_image.src, 'Fire Alarm Services',
+                    `Our fire alarm services ensure the safety of your workplace with 
+                    state-of-the-art systems and expert maintenance. We provide
+                     comprehensive solutions to protect your employees and assets 
+                     from fire hazards, giving you peace of mind.`)}
+                />
               </div>
               <p className={styles.image_text}>Fire alarm</p>
               <div className={styles.image_thick_line}></div>
@@ -293,7 +328,16 @@ export default function MainPageClient() {
             {/* 2 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={1}>
               <div className={styles.image_wrapper}>
-                <img src={electrical_image.src} alt="Electrical image" className={styles.experiance_image} />
+                <img
+                  src={electrical_image.src}
+                  alt="Electrical image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(electrical_image.src, 'Electrical Services',
+                    `Our electrical services ensure the safety and efficiency of your
+                     workplace with state-of-the-art systems and expert maintenance.
+                      We provide comprehensive solutions to protect your employees
+                       and assets from electrical hazards, giving you peace of mind.` )}
+                />
               </div>
               <p className={styles.image_text}>Electrical</p>
               <div className={styles.image_thick_line}></div>
@@ -302,7 +346,16 @@ export default function MainPageClient() {
             {/* 3 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={2}>
               <div className={styles.image_wrapper}>
-                <img src={hvac_image.src} alt="Hvac image" className={styles.experiance_image} />
+                <img
+                  src={hvac_image.src}
+                  alt="Hvac image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(hvac_image.src, 'HVAC Services',
+                    `Our HVAC services ensure the comfort and efficiency of your
+                     workplace with state-of-the-art systems and expert maintenance.
+                      We provide comprehensive solutions to maintain optimal indoor
+                       climate, giving you peace of mind.` )}
+                />
               </div>
               <p className={styles.image_text}>Hvac</p>
               <div className={styles.image_thick_line}></div>
@@ -311,7 +364,16 @@ export default function MainPageClient() {
             {/* 4 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={3}>
               <div className={styles.image_wrapper}>
-                <img src={designe_image.src} alt="Design image" className={styles.experiance_image} />
+                <img
+                  src={designe_image.src}
+                  alt="Design image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(designe_image.src, 'Design Services',
+                    `Our design services ensure the aesthetic and functional quality of
+                    your workplace with state-of-the-art systems and expert maintenance.
+                     We provide comprehensive solutions to create an optimal environment,
+                      giving you peace of mind.`)}
+                />
               </div>
               <p className={styles.image_text}>Design</p>
               <div className={styles.image_thick_line}></div>
@@ -320,7 +382,15 @@ export default function MainPageClient() {
             {/* 5 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={4}>
               <div className={styles.image_wrapper}>
-                <img src={supervision_image.src} alt="Supervision image" className={styles.experiance_image} />
+                <img
+                  src={supervision_image.src}
+                  alt="Supervision image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(supervision_image.src, 'Supervision Services',
+                    `Our supervision services ensure the quality and safety of your workplace with
+                     state-of-the-art systems and expert maintenance. We provide comprehensive solutions
+                      to monitor and manage your operations, giving you peace of mind.`)}
+                />
               </div>
               <p className={styles.image_text}>Supervision</p>
               <div className={styles.image_thick_line}></div>
@@ -329,7 +399,16 @@ export default function MainPageClient() {
             {/* 6 image */}
             <motion.div className={styles.each_image_cont} variants={cardVariants} custom={5}>
               <div className={styles.image_wrapper}>
-                <img src={audit_image.src} alt="Audit image" className={styles.experiance_image} />
+                <img
+                  src={audit_image.src}
+                  alt="Audit image"
+                  className={styles.experiance_image}
+                  onClick={() => handleImageClick(audit_image.src, 'Audit Services',
+                    `Our audit services ensure the compliance and efficiency of your
+                     workplace with state-of-the-art systems and expert maintenance.
+                      We provide comprehensive solutions to assess and improve your
+                       operations, giving you peace of mind.` )}
+                />
               </div>
               <p className={styles.image_text}>Audit</p>
               <div className={styles.image_thick_line}></div>
@@ -434,7 +513,10 @@ export default function MainPageClient() {
           </motion.div>
 
         </div>
-
+        {/* Modal */}
+        {isModalOpen && (
+          <Modal image={modalContent.image} header={modalContent.header} text={modalContent.text} onClose={closeModal} />
+        )}
       </main>
     </div>
   );

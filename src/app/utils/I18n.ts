@@ -129,9 +129,10 @@ const resources = {
 };
 
 
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ka", 
+  lng: "ka",
   fallbackLng: "en",
   interpolation: { escapeValue: false },
 });
