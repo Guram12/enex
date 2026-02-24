@@ -1,0 +1,131 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Darker background for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out; /* Fade-in animation for overlay */
+}
+
+.modalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.4s ease-in-out; /* Slide-in animation for modal */
+}
+
+.modal_child_content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+  color: #ff0000; /* Highlight color on hover */
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.5s ease-in-out; /* Zoom-in animation for image */
+}
+
+
+.modal_descriptions{
+  width: 500px;
+  min-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+.modalHeader{
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  animation: fadeIn 0.6s ease-in-out; /* Fade-in animation for header */
+}
+
+
+.modalText {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  animation: fadeIn 0.6s ease-in-out; /* Fade-in animation for text */
+  max-height: 200px;
+  text-align: left;
+  overflow-y: auto;
+
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
