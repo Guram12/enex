@@ -4,12 +4,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Darker background for better focus */
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease-in-out; /* Fade-in animation for overlay */
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .modalContent {
@@ -27,17 +27,16 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  animation: slideIn 0.4s ease-in-out; /* Slide-in animation for modal */
+  animation: slideIn 0.4s ease-in-out;
 }
 
-.modal_child_content{
+.modal_child_content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
   width: 100%;
-  
 }
 
 .closeButton {
@@ -51,11 +50,12 @@
   color: #333;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 10;
 }
 
 .closeButton:hover {
   transform: scale(1.2);
-  color: #ff0000; /* Highlight color on hover */
+  color: #ff0000;
 }
 
 .modalImage {
@@ -64,11 +64,10 @@
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  animation: zoomIn 0.5s ease-in-out; /* Zoom-in animation for image */
+  animation: zoomIn 0.5s ease-in-out;
 }
 
-
-.modal_descriptions{
+.modal_descriptions {
   width: 500px;
   min-width: 500px;
   height: 100%;
@@ -79,53 +78,164 @@
   gap: 50px;
 }
 
-.modalHeader{
+.modalHeader {
   font-size: 24px;
   color: #222;
   font-weight: bold;
-  animation: fadeIn 0.6s ease-in-out; /* Fade-in animation for header */
+  animation: fadeIn 0.6s ease-in-out;
 }
-
 
 .modalText {
   font-size: 18px;
   color: #444;
   line-height: 1.6;
-  animation: fadeIn 0.6s ease-in-out; /* Fade-in animation for text */
+  animation: fadeIn 0.6s ease-in-out;
   max-height: 200px;
   text-align: left;
   overflow-y: auto;
-
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideIn {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===================== MOBILE RESPONSIVE STYLES ===================== */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+  .modalContent {
+    padding: 24px;
+    height: auto;
+    max-height: 90%;
+    overflow-y: auto;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  .modal_child_content {
+    gap: 30px;
+  }
+
+  .modal_descriptions {
+    width: 340px;
+    min-width: 340px;
+    gap: 30px;
+  }
+
+  .modalHeader {
+    font-size: 20px;
+  }
+
+  .modalText {
+    font-size: 16px;
+    max-height: 250px;
+  }
+
+  .modalImage {
+    max-width: 100%;
+    max-height: 50%;
+  }
+}
+
+/* Mobile Large - 768px */
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 20px 16px;
+    width: 95%;
+    max-height: 92vh;
+    height: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    align-items: flex-start;
+  }
+
+  .modal_child_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .modal_descriptions {
+    width: 100%;
+    min-width: unset;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .modalImage {
+    max-width: 100%;
+    max-height: 280px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+
+  .modalHeader {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .modalText {
+    font-size: 15px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .closeButton {
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+  }
+}
+
+/* Mobile Small - 480px */
+@media (max-width: 480px) {
+  .modalContent {
+    padding: 16px 12px;
+    width: 98%;
+    max-height: 94vh;
+    border-radius: 8px;
+  }
+
+  .modal_child_content {
+    gap: 14px;
+    padding-top: 28px;
+  }
+
+  .modalImage {
+    max-height: 200px;
+    border-radius: 6px;
+  }
+
+  .modal_descriptions {
+    gap: 12px;
+  }
+
+  .modalHeader {
+    font-size: 18px;
+  }
+
+  .modalText {
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 160px;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
   }
 }
